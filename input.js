@@ -27,31 +27,37 @@ const handleUserInput = function() {
     case 'w':
     case 'W':
     case '\u001b[A':
-      // console.log("Move up!");
       connection.write('Move: up');
       break;
     
     case 'a':
     case 'A':
     case '\u001b[C':
-      // console.log("Move right!");
       connection.write('Move: right');
       break;
 
     case 's':
     case 'S':
     case '\u001b[B':
-      // console.log("Move down!");
       connection.write('Move: down');
       break;
 
     case 'd':
     case 'D':
     case '\u001b[D':
-      // console.log("Move left!");
       connection.write('Move: left');
       break;
     
+    case 'x':
+    case 'X':
+      connection.write('Say: Huuuungry!!!');
+      break;
+        
+    case 'z':
+    case 'Z':
+      connection.write('Say: I am the SNAKE');
+      break;
+            
     case '\u0003':
       console.log("Thanks for using me, ciao!");
       process.exit();
